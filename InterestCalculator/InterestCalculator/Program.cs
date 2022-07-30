@@ -4,32 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please Enter The Following Information: ");
-            Console.Write("Principle Amount: ");
-            String strPrinciple = Console.ReadLine();
-
-            Console.Write("Interest Rate (in%): ");
-            String strInterestRate = Console.ReadLine();
-
-            Console.Write("Please Enter Duration in Years: ");
-            String strDuration = Console.ReadLine();
+            //Program Inputs
+            string strPrinciple, strInterestRate, strDuration, strPaymentType, strInterestType;
+            CalculationInputs(out strPrinciple, out strInterestRate, out strDuration, out strPaymentType, out strInterestType);
 
 
-            Console.Write("\nSelect Duration of the Payment " +
-                          "\nEnter 1 for Weekly" +
-                          "\nEnter 2 for Bi-Weekly" +
-                          "\nEnter 3 for Monthly" +
-                          "\nPayment Duration : ");
-            String strPaymentType = Console.ReadLine();
-
-            Console.Write("\nSelect Type of Interest" +
-                          "\nEnter 1 for Simple" +
-                          "\nEnter 2 for compound" +
-                          "\nInterest Type : ");
-            String strInterestType = Console.ReadLine();
-
-
-            //Console.WriteLine(strPrinciple + " " + strInterestRate + " " + strDuration + " " + strPaymentType + " " + strInterestType);
 
             //CALCULATION
 
@@ -93,6 +72,30 @@
 
 
             //Compund Interest Calculation
+        }
+
+        private static void CalculationInputs(out string strPrinciple, out string strInterestRate, out string strDuration, out string strPaymentType, out string strInterestType)
+        {
+            Console.WriteLine("Please Enter The Following Information: ");
+            Console.Write("Principle Amount: ");
+            strPrinciple = Console.ReadLine();
+            Console.Write("Interest Rate (in%): ");
+            strInterestRate = Console.ReadLine();
+            Console.Write("Please Enter Duration in Years: ");
+            strDuration = Console.ReadLine();
+            Console.Write("\nSelect Duration of the Payment " +
+                          "\nEnter 1 for Weekly" +
+                          "\nEnter 2 for Bi-Weekly" +
+                          "\nEnter 3 for Monthly" +
+                          "\nPayment Duration : ");
+            strPaymentType = Console.ReadLine();
+            Console.Write("\nSelect Type of Interest" +
+                          "\nEnter 1 for Simple" +
+                          "\nEnter 2 for compound" +
+                          "\nInterest Type : ");
+            strInterestType = Console.ReadLine();
+            
+            Console.WriteLine(strPrinciple + " " + strInterestRate + " " + strDuration + " " + strPaymentType + " " + strInterestType);
         }
     }
 }
