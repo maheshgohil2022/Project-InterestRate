@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterestCalculator", "InterestCalculator.csproj", "{9C647807-2775-4BE0-9BA7-B4E0735B05E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterestCalculator", "InterestCalculator.csproj", "{DF1D54BC-2B88-4603-9DE1-77FC55412F3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C647807-2775-4BE0-9BA7-B4E0735B05E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C647807-2775-4BE0-9BA7-B4E0735B05E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C647807-2775-4BE0-9BA7-B4E0735B05E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C647807-2775-4BE0-9BA7-B4E0735B05E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF1D54BC-2B88-4603-9DE1-77FC55412F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF1D54BC-2B88-4603-9DE1-77FC55412F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF1D54BC-2B88-4603-9DE1-77FC55412F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF1D54BC-2B88-4603-9DE1-77FC55412F3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1264A6E8-F4D1-47ED-844F-D7C4F9C47602}
+		SolutionGuid = {65DE6524-29E3-437A-832F-F04F690D401D}
 	EndGlobalSection
 EndGlobal

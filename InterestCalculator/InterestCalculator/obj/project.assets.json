@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mahesh\\Documents\\GitHub\\Project1\\InterestCalculator\\InterestCalculator.csproj",
+      "projectUniqueName": "C:\\Users\\mahesh\\Documents\\GitHub\\Project1\\InterestCalculator\\InterestCalculator\\InterestCalculator.csproj",
       "projectName": "InterestCalculator",
-      "projectPath": "C:\\Users\\mahesh\\Documents\\GitHub\\Project1\\InterestCalculator\\InterestCalculator.csproj",
+      "projectPath": "C:\\Users\\mahesh\\Documents\\GitHub\\Project1\\InterestCalculator\\InterestCalculator\\InterestCalculator.csproj",
       "packagesPath": "C:\\Users\\mahesh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mahesh\\Documents\\GitHub\\Project1\\InterestCalculator\\obj\\",
+      "outputPath": "C:\\Users\\mahesh\\Documents\\GitHub\\Project1\\InterestCalculator\\InterestCalculator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mahesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
