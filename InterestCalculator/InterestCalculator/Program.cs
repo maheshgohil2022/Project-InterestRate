@@ -31,9 +31,10 @@ namespace InterestCalculator
 
 
             //CALCULATION
+
             //Convert Values into Numbers
             Double principle = double.Parse(strPrinciple);
-            float interestRate = float.Parse(strInterestRate);
+            float interestRate = float.Parse(strInterestRate) / 100;
             int duration = int.Parse(strDuration);
 
             int paymentType = int.Parse(strPaymentType);
@@ -61,15 +62,35 @@ namespace InterestCalculator
                     break;
             }
 
-
+            Console.WriteLine("\n---OUTPUT---");
             switch (interestType)
             {
                 case 1:
-                    strInterestType = "Simple Interest";
+                    {
+                        strInterestType = "Simple Interest";
+
+                        //Simple Interest Calculation
+                        Double interestAmount = (principle * interestRate * duration) / 100;
+
+                        double finalAmount = principle + interestAmount;
+                        double installment = finalAmount / (duration * paymentType);
+
+                        installment = Math.Round(installment, 2);
+
+                        Console.WriteLine("\n\nInterest Amount: $ " + interestAmount + "\nInstallment: $ " + installment + " " + strPaymentType + "\nFinal amount: $ " + finalAmount);
+                    }
                     break;
 
                 case 2:
-                    strInterestType = "Compound Interest";
+                    {
+                        strInterestType = "Compound Interest";
+
+                        //Compund Interest Calculation
+                        int annualCompound = 1;
+                        double Total = principle * Math.Pow((1 + interestRate / annualCompound),
+                                 (annualCompound * duration));
+                        Console.WriteLine("Compound Interest: " + Total.ToString("C2"));
+                    }
                     break;
 
                 default:
@@ -77,20 +98,32 @@ namespace InterestCalculator
                     break;
             }
 
+            //PAYMENT TABLE CALCULATION
+            /*double monthlyInterest = interestRate / 12;
+            double numberOfPayments = duration * 12;
+
+            double remainingAmount = principle * (
+                                     (Math.Pow(1 + monthlyInterest, numberOfPayments), numberOfPayments)) / 
+                                     (Math.Pow(1 + monthlyInterest, numberOfPayments) - 1);
             //Console.WriteLine(principle + " " + interestRate + " " + duration + " " + strPaymentType + " " + strInterestType);
+            
+            public static double calculateMortgage(
+            int principal,
+            float annualInterest,
+            byte years) {
 
-            //Simple Interest Calculation
-            Double interestAmount = (principle * interestRate * duration) / 100;
+        float monthlyInterest = annualInt
+        float numberOfPayments = years * MONTHS_IN_YEAR;
 
-            double finalAmount = principle + interestAmount;
-            double installment = finalAmount / (duration * paymentType);
+        double mortgage = principal
+                * (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPayments))
+                / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1);
 
-            installment = Math.Round(installment, 2);
+        return mortgage;
+    }
+          */
 
-            Console.WriteLine("\n\nInterest Amount: $ " + interestAmount + "\nInstallment: $ " + installment + " " + strPaymentType + "\nFinal amount: $ " + finalAmount);
 
-
-            //Compund Interest Calculation
         }
 
         private static void CalculationInputs(out string strPrinciple, out string strInterestRate, out string strDuration, out string strPaymentType, out string strInterestType)
@@ -113,8 +146,8 @@ namespace InterestCalculator
                           "\nEnter 2 for compound" +
                           "\nInterest Type : ");
             strInterestType = Console.ReadLine();
-            
-            Console.WriteLine(strPrinciple + " " + strInterestRate + " " + strDuration + " " + strPaymentType + " " + strInterestType);
+
+            //Console.WriteLine(strPrinciple + " " + strInterestRate + " " + strDuration + " " + strPaymentType + " " + strInterestType);
         }
     }
 }
