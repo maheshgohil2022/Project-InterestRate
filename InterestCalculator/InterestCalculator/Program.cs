@@ -1,4 +1,24 @@
-﻿namespace InterestCalculator
+﻿
+/*
+ * Interest Installment Calculator
+
+Inputs:
+Loan Amount
+Interest Rate
+Calculation - Simple/compound
+Payment/Installment Frequency - Weekly/Monthly
+Total Duration - In weeks/Months/Years
+
+Output: <for each installment>
+Installment Amount
+Paid Interest
+Paid Capital
+Remaining Capital
+
+Possible Inclusion: Switching Frequency of payment in between the period
+*/
+
+namespace InterestCalculator
 {
     internal class Program
     {
@@ -11,7 +31,6 @@
 
 
             //CALCULATION
-
             //Convert Values into Numbers
             Double principle = double.Parse(strPrinciple);
             float interestRate = float.Parse(strInterestRate);
